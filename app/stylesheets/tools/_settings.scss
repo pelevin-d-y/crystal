@@ -38,14 +38,14 @@ canvas {
 	background: #fff;
 }
 
-.rotebal {
+.filter {
   background: #CDB7FD;
   position: fixed;
   opacity: 0.5;
   top: 0;left: 0;right: 0;bottom: 0;
 }
 
-.zbs {
+.img {
 	position: absolute;
 	z-index: 10;
 	width: 500px;
@@ -57,3 +57,14 @@ canvas {
   position: relative;
   z-index: 10;
 }
+
+#fullpage {
+  position: relative;
+  z-index: 10;
+}
+
+.main-nav {
+  position: relative;
+  z-index: 11;
+}
+

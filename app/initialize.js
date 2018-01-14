@@ -1,5 +1,6 @@
 import $ from "jquery"
 import slick from 'slick-carousel'
+import fullpage from 'fullpage.js'
 
 
 var c1 = document.getElementById( 'c1' ),
@@ -129,3 +130,20 @@ window.addEventListener( 'resize', resize );
 window.addEventListener( 'click', click );
 
 init();
+
+
+// fullpage
+$(document).ready(function() {
+    $('#fullpage').fullpage({
+      anchors:['page-1','page-2', 'page-3', 'page-4', 'page-5'],
+      menu: '#menu',
+      navigation: true,
+    });
+});
+
+// next code
+document.querySelector('.container').addEventListener('click', (evt) => {
+  evt.stopPropagation();
+  console.log('sadfasdf')
+})
+
