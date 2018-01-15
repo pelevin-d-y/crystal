@@ -1,0 +1,31 @@
+.location__content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.location__text {
+  max-width: 280px;
+  width: 100%;
+
+  font-size: 22px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.location__text span {
+  font-size: 35px;
+  font-weight: bold;
+  color: rgb(233, 200, 56);
+  text-shadow: 0 0 10px rgba(255,210,119, 0.5);
+}
+
+.location__data {
+  font-size: 35px;
+  font-weight: bold;
+  color: rgb(233, 200, 56);
+  text-shadow: 0 0 10px rgba(255,210,119, 0.5);
+  margin-top: 5px;
+
+}

@@ -1,0 +1,29 @@
+.dress-code {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin-left: 10vw;
+}
+
+.dress-code__text {
+  max-width: 600px;
+}
+
+.dress-code__title {
+  margin-bottom: 20px;
+
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.dress-code__section-title {
+  margin-bottom: 10px;
+
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.dress-code__section-text {
+  margin-bottom: 20px;
+}

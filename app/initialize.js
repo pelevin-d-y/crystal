@@ -131,19 +131,36 @@ window.addEventListener( 'click', click );
 
 init();
 
-
 // fullpage
+
 $(document).ready(function() {
-    $('#fullpage').fullpage({
-      anchors:['page-1','page-2', 'page-3', 'page-4', 'page-5'],
-      menu: '#menu',
-      navigation: true,
-    });
+  $('#fullpage').fullpage({
+    anchors:['page-1','page-2', 'page-3', 'page-4', 'page-5'],
+    menu: '#menu',
+    navigation: true
+  });
 });
 
-// next code
-document.querySelector('.container').addEventListener('click', (evt) => {
+
+$('.container').click(function(evt) {
   evt.stopPropagation();
-  console.log('sadfasdf')
 })
 
+$('.filter').click(function(evt) {
+  evt.stopPropagation();
+})
+
+$('.main-nav-overlay').click(function(evt) {
+  evt.stopPropagation();
+})
+
+$('#fullpage').click(function(evt) {
+  evt.stopPropagation();
+})
+
+$("#navToggle").click(function(evt) {
+  evt.stopPropagation();
+  $(this).toggleClass("active");
+  $(".main-nav-overlay").toggleClass("open");
+  $("body").toggleClass("locked");
+});

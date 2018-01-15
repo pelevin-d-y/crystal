@@ -1,0 +1,33 @@
+.page-header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-nav {
+  position: relative;
+  z-index: 11;
+}
+
+.img {
+	position: relative;
+	z-index: 10;
+  max-width: 650px;
+  width: 100%;
+	left: 50%;
+  transform: translateX(-50%);
+
+  margin-bottom: 30px;
+}
+
+.page-header__text {
+  max-width: 750px;
+  width: 100%;
+
+  line-height: 25px;
+}
+
+.page-header__text {
+  margin-bottom: 10px;
+}
