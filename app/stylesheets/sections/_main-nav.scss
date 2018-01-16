@@ -177,3 +177,15 @@ p {
   font-family: "Crimson Text";
   color: #222;
 }
+
+@media (max-width: 500px) {
+    .main-nav ul li a{
+      font-size: 25px;
+      &:hover,
+        &:active,
+        &:focus {
+          padding-right: 50px;
+
+        }
+    }
+}
