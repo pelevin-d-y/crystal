@@ -12,6 +12,7 @@
   font-size: 22px;
   text-align: center;
   text-transform: uppercase;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .location__text span {
@@ -27,5 +28,14 @@
   color: rgb(233, 200, 56);
   text-shadow: 0 0 10px rgba(255,210,119, 0.5);
   margin-top: 5px;
+}
 
+@media (max-width: 768px) {
+  .location__content {
+    flex-direction: column;
+  }
+
+  .location__text {
+    margin-bottom: 40px;
+  }
 }

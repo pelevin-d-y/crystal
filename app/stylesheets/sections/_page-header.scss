@@ -21,13 +21,17 @@
   margin-bottom: 30px;
 }
 
-.page-header__text {
-  max-width: 750px;
+.page-header__content {
+  max-width: 650px;
   width: 100%;
-
-  line-height: 25px;
 }
 
 .page-header__text {
+  max-width: 750px;
+  width: 100%;
   margin-bottom: 10px;
+  padding-left: 7px;
+
+  color: #436e9a;
+  line-height: 25px;
 }

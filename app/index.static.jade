@@ -4,8 +4,6 @@ head
   meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
   meta(name="viewport" content="width=device-width")
   meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
-  link(rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css")
-  link(rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css")
   link(rel="stylesheet" href="stylesheets/app.css")
 body
   canvas#c1
@@ -26,7 +24,13 @@ body
               | Dress code
           li
             a(href="#page-4").main-nav__link
+              | Рассадка
+          li
+            a(href="#page-5").main-nav__link
               | Контакты
+          li
+            a(href="#page-6").main-nav__link
+              | Фото и видео
     .navBurger#navToggle
   div#fullpage
     header.container.page-header.section
@@ -64,7 +68,15 @@ body
           .dress-code__section-text
             | Black-tie, intelligent, casual и все, что сделает вас неотразимым. Приветствуются аксессуары в crystal стилистике.
         .dress-code__img
-          img(src="./images/people2.png")
+          img(src="./images/people.png" class="derss-code__people")
+    section.container.section
+      .seating__content
+        .seating__title
+          | Рассадка
+        form(action="#", method="get").seating-form
+          input(type="text" name="surname" placeholder = "Введите ФИО" class = "seating__input")
+          button.seating__button
+            | Узнать номер стола
     section.container.section
       .contacts
         .contacts__questions
@@ -81,12 +93,24 @@ body
             | Тел.: +7 961 274 50 63
     section.container.section
       .foto-video__content
-        .foto-video-container
-          a(href="#").foto-video-title
+        a(href="#").foto-video-container
+          .foto-video-title
             | Фото
-        .foto-video-container
-          a(href="#").foto-video-title
+        a(href="#").foto-video-container
+          .foto-video-title
             | Видео
+  .popup
+    .popup-overlay
+      .popup-container
+        button.popup-close
+        .popup__text
+          | Ваш номер стола:
+        .popup__number
+          | 25
+
+
+  script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+
   script(src="javascripts/vendor.js")
   script(src="javascripts/app.js")
 

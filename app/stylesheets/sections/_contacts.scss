@@ -1,6 +1,9 @@
 .contacts {
-  margin-left: 10vw;
+  margin-left: 9vw;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
   line-height: 30px;
+  text-shadow: none;
 }
 
 .contacts__questions {
@@ -12,4 +15,15 @@
 .contacts__name {
   font-weight: bold;
   margin-bottom: 10px;
+}
+
+.contacts__email a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .contacts {
+    margin: 0 auto;
+  }
 }

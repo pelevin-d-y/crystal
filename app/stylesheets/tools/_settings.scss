@@ -2,9 +2,9 @@ body {
   font-family: 'CenturyGothic', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-   color: rgb(39, 54, 173);
+  color: rgb(255, 255, 255);
   font-size: 20px;
-  text-shadow: 0 0 10px rgba(39, 54, 173, 0.5)
+  // text-shadow: 0 0 30px rgba(255,255,255, 0.5)
 }
 
 * {
@@ -51,11 +51,21 @@ canvas {
   // z-index: 10;
   background: #CDB7FD;
   position: fixed;
-  opacity: 0.4;
+  opacity: 0.5;
   top: 0;left: 0;right: 0;bottom: 0;
 }
 
 img {
   max-width: 700px;
   width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0 12px;
+  }
 }
