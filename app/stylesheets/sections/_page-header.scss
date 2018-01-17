@@ -11,11 +11,11 @@
 }
 
 .img {
-	position: relative;
-	z-index: 10;
+  position: relative;
+  z-index: 10;
   max-width: 650px;
   width: 100%;
-	left: 50%;
+  left: 50%;
   transform: translateX(-50%);
 
   margin-bottom: 30px;
@@ -34,4 +34,11 @@
 
   color: #436e9a;
   line-height: 25px;
+
+}
+
+@media (max-width: 500px) {
+    .page-header__text {
+        font-size: 19px;
+    }
 }
