@@ -43,8 +43,12 @@
   }
 }
 
-@media (max-width: 500px) {
-    .page-header__text {
-        font-size: 19px;
-    }
+@media (max-width: 550px) {
+  .page-header__content {
+    padding-top: 25px;
+  }
+
+  .page-header__text {
+      font-size: 19px;
+  }
 }

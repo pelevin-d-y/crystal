@@ -178,7 +178,12 @@ p {
   color: #222;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
+  .navBurger {
+    left: 20px;
+    top: 20px;
+  }
+
     .main-nav ul li a{
       font-size: 25px;
       &:hover,
