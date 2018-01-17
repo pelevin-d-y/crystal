@@ -9,6 +9,7 @@
 
 .foto-video-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   max-width: 350px;
@@ -24,10 +25,19 @@
   }
 }
 
-.foto-video-title {
+.foto-video__text.foto-video__text {
+  padding: 0 12px;
+  margin-top: 20px;
+
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.foto-video-title .fa {
   font-weight: bold;
   text-align: center;
-  font-size: 40px;
+  font-size: 70px;
 
   text-transform: uppercase;
   color: #fff;
@@ -35,8 +45,8 @@
   transition: font-size 0.5s;
 }
 
-.foto-video-container:hover .foto-video-title {
-  font-size: 43px;
+.foto-video-container:hover .foto-video-title .fa {
+  font-size: 72px;
 }
 
 @media (max-width: 800px) {

@@ -28,9 +28,9 @@ body
           li
             a(href="#page-5").main-nav__link
               | Контакты
-          li
-            a(href="#page-6").main-nav__link
-              | Фото и видео
+          //- li
+          //-   a(href="#page-6").main-nav__link
+          //-     | Фото и видео
     .navBurger#navToggle
   div#fullpage
     header.container.page-header.section
@@ -91,14 +91,18 @@ body
                | mvgureva@rnd.beeline.ru
           .contacts__tel
             | Тел.: +7 961 274 50 63
-    section.container.section
-      .foto-video__content
-        a(href="#").foto-video-container
-          .foto-video-title
-            | Фото
-        a(href="#").foto-video-container
-          .foto-video-title
-            | Видео
+    //- section.container.section
+    //-   .foto-video__content
+    //-     a(href="#").foto-video-container
+    //-       .foto-video-title
+    //-         i(class="fa fa-camera-retro")
+    //-       .foto-video__text
+    //-         | Видео будет доступно после 30 января
+    //-     a(href="#").foto-video-container
+    //-       .foto-video-title
+    //-         i(class="fa fa-video-camera")
+    //-       .foto-video__text
+    //-         | Видео будет доступно после 30 января
   .popup
     .popup-overlay
       .popup-container
@@ -106,11 +110,9 @@ body
         .popup__text
           | Ваш номер стола:
         .popup__number
-          | #
-
+          | Нет совпадений
 
   script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
-
   script(src="javascripts/vendor.js")
   script(src="javascripts/app.js")
 

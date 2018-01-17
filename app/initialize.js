@@ -1,6 +1,105 @@
 import $ from "jquery"
 import fullpage from 'fullpage.js'
 import autocomplete from 'jquery-autocomplete'
+import dataList from './data'
+
+// fullpage
+
+$(document).ready(function() {
+  $('#fullpage').fullpage({
+    anchors:['page-1','page-2', 'page-3', 'page-4', 'page-5'],
+    menu: '#menu',
+    navigation: true
+  });
+});
+
+// autocomplete and popup
+
+var formButton = $('.seating__button');
+var popupButtonClose = $('.popup-close');
+var seatInput = jQuery(".seating__input");
+
+const FullNameArray = dataList.map((element) => {
+  return element['ФИО'];
+})
+
+seatInput.autocomplete({
+  source:[FullNameArray],
+  limit: 20,
+  visibleLimit: 6
+});
+
+formButton.click(function(evt) {
+  evt.preventDefault();
+
+  var coincidence = dataList.some((element) => {
+    return seatInput.val() === element['ФИО']
+  });
+
+  if (coincidence) {
+    dataList.forEach((element) => {
+      if (seatInput.val() === element['ФИО']) {
+        $('.popup__text').removeClass('hidden');
+        $('.popup__number').text(element['стол']);
+      }
+    });
+  } else {
+    $('.popup__text').addClass('hidden');
+    $('.popup__number').text('Имя не найдено');
+  }
+
+  $('.popup').addClass('open-popup');
+});
+
+popupButtonClose.click(function() {
+  $('.popup').removeClass('open-popup');
+})
+
+$('.popup-overlay').click(function(evt) {
+    if ($(evt.target).closest('.popup-container').length == 0) {
+    $('.popup').removeClass('open-popup');
+  }
+});
+
+// navigation
+
+$("#navToggle").click(function(evt) {
+  evt.stopPropagation();
+  $(this).toggleClass("active");
+  $(".main-nav-overlay").toggleClass("open");
+  $("body").toggleClass("locked");
+});
+
+var links = document.querySelectorAll('.main-nav__link')
+Array.from(links).forEach((link) => {
+  link.addEventListener('click', () => {
+    $(".main-nav-overlay").removeClass("open");
+    $("body").removeClass("locked");
+    $("#navToggle").removeClass("active");
+  })
+})
+
+// next code
+
+$('.container').click(function(evt) {
+  evt.stopPropagation();
+})
+
+$('.filter').click(function(evt) {
+  evt.stopPropagation();
+})
+
+$('.main-nav-overlay').click(function(evt) {
+  evt.stopPropagation();
+})
+
+$('#fullpage').click(function(evt) {
+  evt.stopPropagation();
+})
+
+$('.popup').click(function(evt) {
+  evt.stopPropagation();
+})
 
 
 // canvas
@@ -132,86 +231,3 @@ window.addEventListener( 'resize', resize );
 window.addEventListener( 'click', click );
 
 init();
-
-// fullpage
-
-$(document).ready(function() {
-  $('#fullpage').fullpage({
-    anchors:['page-1','page-2', 'page-3', 'page-4', 'page-5', 'page-6'],
-    menu: '#menu',
-    navigation: true
-  });
-});
-
-
-// next code
-
-$('.container').click(function(evt) {
-  evt.stopPropagation();
-})
-
-$('.filter').click(function(evt) {
-  evt.stopPropagation();
-})
-
-$('.main-nav-overlay').click(function(evt) {
-  evt.stopPropagation();
-})
-
-$('#fullpage').click(function(evt) {
-  evt.stopPropagation();
-})
-
-$('.popup').click(function(evt) {
-  evt.stopPropagation();
-})
-
-$("#navToggle").click(function(evt) {
-  evt.stopPropagation();
-  $(this).toggleClass("active");
-  $(".main-nav-overlay").toggleClass("open");
-  $("body").toggleClass("locked");
-});
-
-var formButton = $('.seating__button');
-var popupButtonClose = $('.popup-close');
-
-formButton.click(function(evt) {
-  evt.preventDefault();
-  $('.popup').addClass('open-popup');
-});
-
-popupButtonClose.click(function() {
-  $('.popup').removeClass('open-popup');
-})
-
-$('.popup-overlay').click(function(evt) {
-    if ($(evt.target).closest('.popup-container').length == 0) {
-    $('.popup').removeClass('open-popup');
-  }
-});
-
-
-// autocomplete
-
-var states = [
-  'Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California',
-  'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia',
-  'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa',
-  'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland',
-  'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi',
-  'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire',
-  'New Jersey', 'New Mexico', 'New York', 'North Carolina',
-  'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania',
-  'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee',
-  'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington',
-  'West Virginia', 'Wisconsin', 'Wyoming'
-];
-
-jQuery(".seating__input").autocomplete({
-  source:[states],
-  limit: 20,
-  visibleLimit: 6
-});
-
-

@@ -34,7 +34,13 @@
 
   color: #436e9a;
   line-height: 25px;
+}
 
+@media (max-width: 768px) {
+  .page-header__text {
+    color: #fff;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
 }
 
 @media (max-width: 500px) {
