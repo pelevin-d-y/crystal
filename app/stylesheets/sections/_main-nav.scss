@@ -178,23 +178,6 @@ p {
   color: #222;
 }
 
-<<<<<<< HEAD
-@media (max-width: 600px) {
-  .main-nav {
-    margin-top: 20px;
-  }
-
-  .main-nav ul li a {
-    font-size: 26px;
-
-    &:hover,
-    &:active,
-    &:focus {
-      padding-right: 50px;
-    }
-  }
-}
-=======
 @media (max-width: 500px) {
     .main-nav ul li a{
       font-size: 25px;
@@ -206,4 +189,3 @@ p {
         }
     }
 }
->>>>>>> 0d29148b6b43c1369e18de8eede792c18d56dae0
