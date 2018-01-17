@@ -1,5 +1,7 @@
 .seating__content {
   margin: 0 auto;
+  max-width: 600px;
+  width: 100%;
 }
 
 .seating-form {
@@ -19,16 +21,12 @@
 }
 
 .seating__input {
-  background: none;
   border: none;
   max-width: 600px;
   width: 100%;
 
   padding: 10px 20px 10px 20px;
   font-size: 25px;
-
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
-
   outline: none;
 }
 
@@ -48,4 +46,11 @@
 
 .seating__button:hover {
   background-color: rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 600px) {
+  .seating__content {
+    height: 100%;
+    padding-top: 100px;
+  }
 }

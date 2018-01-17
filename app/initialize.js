@@ -210,7 +210,8 @@ var states = [
 
 jQuery(".seating__input").autocomplete({
   source:[states],
-  limit: 6
+  limit: 20,
+  visibleLimit: 6
 });
 
 

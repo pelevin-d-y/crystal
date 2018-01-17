@@ -113,7 +113,7 @@
   z-index: 40;
   text-align: left;
   left: 10vw;
-  // top: 10vw;
+
   ul {
       list-style: none;
       padding: 0;
@@ -176,4 +176,20 @@ p {
   font-size: 16px;
   font-family: "Crimson Text";
   color: #222;
+}
+
+@media (max-width: 600px) {
+  .main-nav {
+    margin-top: 20px;
+  }
+
+  .main-nav ul li a {
+    font-size: 26px;
+
+    &:hover,
+    &:active,
+    &:focus {
+      padding-right: 50px;
+    }
+  }
 }
