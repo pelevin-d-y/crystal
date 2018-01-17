@@ -48,13 +48,22 @@ body
           | Мы ждем вас
           .location__data
             | 25 января
-          = ' '
-          | начало в
-          span
-            = ' '
-            | 18:00
+          .location__data-time
+            | сбор гостей с
+            br
+            span
+              = ' '
+              | 18:00
+              =' '
+            | до
+            span
+              = ' '
+              | 19:00
         .location__map
-          img(class='map' src='./images/map.png')
+          a(href="./images/map.png" data-fancybox).location__map-link
+            img(class='map' src='./images/map.png')
+          .location__map-text
+            | Все подробности о трансфере на мероприятие вы узнаете в отдельном письме
     section.container.section
       .dress-code
         .dress-code__text

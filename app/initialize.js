@@ -1,7 +1,18 @@
 import $ from "jquery"
 import fullpage from 'fullpage.js'
 import autocomplete from 'jquery-autocomplete'
+import fancybox from '@fancyapps/fancybox'
 import dataList from './data'
+
+jQuery('.location__map-link').fancybox({
+  afterLoad: function() {
+    $.fn.fullpage.setAllowScrolling(false);
+  },
+
+  afterClose: function() {
+    $.fn.fullpage.setAllowScrolling(true);
+  }
+})
 
 // fullpage
 
