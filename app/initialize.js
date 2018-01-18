@@ -4,6 +4,15 @@ import autocomplete from 'jquery-autocomplete'
 import fancybox from '@fancyapps/fancybox'
 import dataList from './data'
 
+
+var UserAgentString = navigator.userAgent;
+
+if(UserAgentString.indexOf('Trident/7.0') + 1) {
+  $('#c1').addClass('hidden')
+  $('#c2').addClass('hidden')
+}
+
+
 jQuery('.location__map-link').fancybox({
   afterLoad: function() {
     $.fn.fullpage.setAllowScrolling(false);
@@ -81,8 +90,12 @@ $("#navToggle").click(function(evt) {
   $("body").toggleClass("locked");
 });
 
-var links = document.querySelectorAll('.main-nav__link')
-Array.from(links).forEach((link) => {
+// var links = document.querySelectorAll('.main-nav__link')
+var links = $('.main-nav__link')
+
+console.log(links);
+
+links.each(function(a, link) {
   link.addEventListener('click', () => {
     $(".main-nav-overlay").removeClass("open");
     $("body").removeClass("locked");
